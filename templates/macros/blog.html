@@ -1,0 +1,15 @@
+{% macro render_blog_post(post, from_index=false) %}
+    {% if from_index %}
+        <!-- Display just a preview if we're paginating -->
+        <div class="post-preview">
+            <a href="{{ post|url }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            </a>
+            <p class="post-meta">Posted on {{ post.pub_date }}</p>
+        </div>
+    {% else %}
+        <!-- Otherwise, actually display the blog post's content -->
+        {{ post.body }}
+    {% endif %}
+{% endmacro %}

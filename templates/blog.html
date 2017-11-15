@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block heading %}
+    <!-- We're just listing previews of blog posts -->
+    <div class="page-heading">
+        <h1>Blog Posts</h1>
+        <hr class="small">
+    </div>
+{% endblock %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+	{% for child in this.pagination.items %}
+        <!-- We're paginating, so display just previews -->
+		{{ render_blog_post(child, from_index=true) }}
+	{% endfor %}
+
+	{{ render_pagination(this.pagination) }}
+{% endblock %}
