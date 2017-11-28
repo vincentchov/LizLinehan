@@ -1,2 +1,5 @@
 [project]
 name = Liz Linehan
+
+[servers.ghpages]
+target = ghpages+https://vincentchov/LizLinehan
