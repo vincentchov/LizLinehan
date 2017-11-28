@@ -48,9 +48,11 @@
                             <a href="{{ href|url }}">{{ title }}</a>
                         </li>
                     {% endfor %}
-                    <li>
-                        <a href="#">Events</a>
-                    </li>
+                    {% for href, title in [['/events', 'Events']] %}
+                        <li {% if this.is_child_of(href) %} class="active"{% endif %}>
+                            <a href="{{ href|url }}">{{ title }}</a>
+                        </li>
+                    {% endfor %}
                     <li>
                         <a href="https://secure.ngpvan.com/V-QjPVM_Ykyj1lN_aaQX-Q2">Donate</a>
                     </li>

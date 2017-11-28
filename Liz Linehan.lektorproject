@@ -1,5 +1,8 @@
 [project]
 name = Liz Linehan
 
+[packages]
+lektor-embed-x = 0.1.2
+
 [servers.ghpages]
 target = ghpages+https://vincentchov/LizLinehan

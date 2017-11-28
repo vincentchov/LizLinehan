@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% from "macros/events.html" import render_event_page %}
+{% block heading %}
+    <div class="post-heading">
+        <h1>{{ this.title }}</h1>
+        <h2 class="subheading">{{ this.subtitle }}</h2>
+        <span class="meta">Occurs on {{ this.event_date }}</span>
+    </div>
+{% endblock %}
+{% block title %}{{ this.title }}{% endblock %}
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {% block body %}
+                    <!-- Render the actual event page -->
+                    {{ render_event_page(this) }}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</article>

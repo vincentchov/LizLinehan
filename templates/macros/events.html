@@ -1,0 +1,15 @@
+{% macro render_event_page(event, from_index=false) %}
+    {% if from_index %}
+        <!-- Display just a preview if we're paginating -->
+        <div class="post-preview">
+            <a href="{{ event|url }}">
+                <h2 class="post-title">{{ event.title }}</h2>
+                <h3 class="post-subtitle">{{ event.subtitle }}</h3>
+            </a>
+            <p class="post-meta">Occurs on {{ event.event_date }}</p>
+        </div>
+    {% else %}
+        <!-- Otherwise, actually display the blog post's content -->
+        {{ event.body }}
+    {% endif %}
+{% endmacro %}

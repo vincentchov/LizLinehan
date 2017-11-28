@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% from "macros/events.html" import render_event_page %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block heading %}
+    <!-- We're just listing previews of event pages -->
+    <div class="page-heading">
+        <h1>Upcoming Events</h1>
+        <hr class="small">
+    </div>
+{% endblock %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+	{% for child in this.pagination.items %}
+        <!-- We're paginating, so display just previews -->
+		{{ render_event_page(child, from_index=true) }}
+	{% endfor %}
+
+	{{ render_pagination(this.pagination) }}
+{% endblock %}
