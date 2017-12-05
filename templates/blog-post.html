@@ -5,7 +5,6 @@
         <h1>{{ this.title }}</h1>
         <h2 class="subheading">{{ this.subtitle }}</h2>
         <span class="meta">Posted on {{ this.pub_date }}</span>
-        <hr class="small">
     </div>
 {% endblock %}
 {% block title %}{{ this.title }}{% endblock %}
@@ -14,6 +13,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% block body %}
+                    <hr class="small">
                     <!-- Render the actual blog post -->
                     {{ render_blog_post(this) }}
                 {% endblock %}

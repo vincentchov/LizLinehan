@@ -5,11 +5,11 @@
     <!-- We're just listing previews of event pages -->
     <div class="page-heading">
         <h1>Upcoming Events</h1>
-        <hr class="small">
     </div>
 {% endblock %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
+    <hr class="small">
 	{% for child in this.pagination.items %}
         <!-- We're paginating, so display just previews -->
 		{{ render_event_page(child, from_index=true) }}

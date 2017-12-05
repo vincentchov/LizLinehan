@@ -3,11 +3,11 @@
     <div class="page-heading">
         <h1>{{ this.title }}</h1>
         <span class="subheading">{{ this.subtitle }}</span>
-        <hr class="small">
     </div>
 {% endblock %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
+    <hr class="small">
     <div class="intrinsic-container intrinsic-container-900x1150">
         {{ this.iframe }}
     </div>
