@@ -24,7 +24,6 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-fixed-top">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="{{ '/'|url }}">Liz Linehan</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar bar1"></span>
                     <span class="navbar-toggler-bar bar2"></span>
@@ -43,18 +42,6 @@
                                 <p>Home</p>
                             </a>
                         </li>
-                    {% for href, title in [['/blog', 'Blog']] %}
-                        {% if this.is_child_of(href) %}
-                            <li class="nav-item active">
-                        {% else %}
-                            <li class="nav-item">
-                        {% endif %}
-                                <a class="nav-link" href="{{ href|url }}">
-                                    <i class="fa fa-newspaper-o"></i>
-                                    <p>{{ title }}</p>
-                                </a>
-                            </li>
-                    {% endfor %}
                     {% for href, title in [['/events', 'Events']] %}
                         {% if this.is_child_of(href) %}
                             <li class="nav-item active">
@@ -68,7 +55,7 @@
                             </li>
                     {% endfor %}
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary" href="https://secure.ngpvan.com/V-QjPVM_Ykyj1lN_aaQX-Q2">
+                        <a class="nav-link btn btn-danger" href="https://secure.ngpvan.com/V-QjPVM_Ykyj1lN_aaQX-Q2">
                             <p>Donate</p>
                         </a>
                     </li>
@@ -119,7 +106,6 @@
         </div>
         <footer class="footer">
             <div class="container">
-                <p class="text-center"><a href="http://www.housedems.ct.gov/Linehan">Visit Liz's Official State House of Representatives Page here!</a></p>
                 <p class="text-muted">Copyright &copy; Vincent Chov</p>
             </div>
         </footer>
