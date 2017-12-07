@@ -6,10 +6,16 @@
                 <h2 class="post-title">{{ event.title }}</h2>
                 <h3 class="post-subtitle">{{ event.subtitle }}</h3>
             </a>
-            <p class="post-meta">Occurs on {{ event.event_date }}</p>
+            <p class="post-meta">Occurs on {{ event.datetime.strftime('%m-%d-%Y') }} at {{ event.datetime.strftime('%I:%M %p %Z') }} in {{ event.event_city }}, {{ event.state}}</p>
         </div>
     {% else %}
-        <!-- Otherwise, actually display the blog post's content -->
+        <!-- Otherwise, actually display the event's content -->
+        <div class="description">
+            <h4 class="info-title">Event Information</h4>
+            <p><strong>Location: </strong><br>{{ event.event_street_1 }}<br>{{ event.event_city}}, {{ event.state }} {{ event.zip_code }}</p>
+            <p><strong>Date: </strong>{{ event.datetime.strftime('%m-%d-%Y') }}</p> 
+            <p><strong>Time: </strong>{{ event.datetime.strftime('%I:%M %p %Z') }}</p>
+        </div>
         {{ event.body }}
     {% endif %}
 {% endmacro %}

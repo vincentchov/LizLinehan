@@ -4,7 +4,7 @@
     <div class="post-heading">
         <h1>{{ this.title }}</h1>
         <h2 class="subheading">{{ this.subtitle }}</h2>
-        <span class="meta">Occurs on {{ this.event_date }}</span>
+        <span class="meta">Occurs on {{ this.datetime.strftime('%m-%d-%Y') }} at {{ this.datetime.strftime('%I:%M %p %Z') }}</span>
     </div>
 {% endblock %}
 {% block title %}{{ this.title }}{% endblock %}
