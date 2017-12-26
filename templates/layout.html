@@ -24,13 +24,6 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-white navbar-fixed-top">
         <div class="container">
-            <div class="navbar-translate">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-bar bar1"></span>
-                    <span class="navbar-toggler-bar bar2"></span>
-                    <span class="navbar-toggler-bar bar3"></span>
-                </button>
-            </div>
             <div class="collapse navbar-collapse" data-nav-image="{{ '/static/now/img/blurred-image-1.jpg'|asseturl }}" data-color="orange">
                 <ul class="navbar-nav ml-auto">
                     {% if this._path == '/' %}
@@ -55,12 +48,17 @@
                                 </a>
                             </li>
                     {% endfor %}
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-danger" href="https://secure.ngpvan.com/V-QjPVM_Ykyj1lN_aaQX-Q2">
-                            <p>Donate</p>
-                        </a>
-                    </li>
                 </ul>
+            </div>
+            <div class="navbar-translate">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+                <a class="nav-link btn btn-danger" href="https://secure.ngpvan.com/V-QjPVM_Ykyj1lN_aaQX-Q2">
+                    <p>Donate</p>
+                </a>
             </div>
         </div>
     </nav>
